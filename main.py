@@ -76,5 +76,5 @@ idf_list=find_idf(tf_list)
 print("Process finished At:,",time.ctime())
 opf=open('idf_list.txt','wb')
 for dic in idf_list:
-    opf.writelines(dic)
+    opf.writelines(str(dic))
 opf.close()
