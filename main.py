@@ -45,7 +45,7 @@ def find_tf_string(token_list):
 #find tf value for all reviews
 def find_tf_list(reviews_list):
     all_tf=[]
-    for i in reviews:
+    for i in reviews_list:
         if(type(i) == str):#to avoid all nan values
             all_tf.append(find_tf_string(remove_stop_words(i)))
     return all_tf
@@ -76,5 +76,5 @@ idf_list=find_idf(tf_list)
 print("Process finished At:,",time.ctime())
 opf=open('idf_list.txt','wb')
 for dic in idf_list:
-    opf.writelines(str(dic))
+    opf.write(str(dic))
 opf.close()
