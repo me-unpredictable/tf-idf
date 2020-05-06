@@ -11,7 +11,6 @@ data=pd.read_csv('hotel-reviews/7282_1.csv')
 def see_info(ds):
     #print information of data set
     print(ds.info())
-    print(ds.nan)
     #print few data from reviews text
     print(ds['reviews.text'].head())
     print(ds['reviews.text'].tail())
